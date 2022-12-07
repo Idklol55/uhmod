@@ -131,6 +131,8 @@ class PlayState extends MusicBeatState
 	public var dad:Character;
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
+	
+	public var boyfriendReflection:Boyfriend; // Reflection Test
 
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
@@ -732,6 +734,12 @@ class PlayState extends MusicBeatState
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
+		
+		boyfriendReflection = new Boyfriend(0, 0, SONG.player1);
+		boyfriendReflection.flipY = true;
+		boyfriendReflectione.alpha = 0.5;
+		startCharacterPos(boyfriendReflection);
+		boyfriendGroup.add(boyfriendReflection);
 		
 		var camPos:FlxPoint = new FlxPoint(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y);
 		camPos.x += gf.cameraPosition[0];
