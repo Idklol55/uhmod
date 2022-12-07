@@ -737,7 +737,7 @@ class PlayState extends MusicBeatState
 		
 		boyfriendReflection = new Boyfriend(0, 0, SONG.player1);
 		boyfriendReflection.flipY = true;
-		boyfriendReflectione.alpha = 0.5;
+		boyfriendReflection.alpha = 0.5;
 		startCharacterPos(boyfriendReflection);
 		boyfriendGroup.add(boyfriendReflection);
 		
