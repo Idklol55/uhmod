@@ -738,8 +738,10 @@ class PlayState extends MusicBeatState
 		boyfriendReflection = new Boyfriend(0, 0, SONG.player1);
 		boyfriendReflection.flipY = true;
 		boyfriendReflection.alpha = 0.5;
+		boyfriendReflection.blend = ADD;//hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 		startCharacterPos(boyfriendReflection);
 		boyfriendGroup.add(boyfriendReflection);
+		insert(members.indexOf(boyfriendGroup) - 1, boyfriendReflection);
 		
 		var camPos:FlxPoint = new FlxPoint(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y);
 		camPos.x += gf.cameraPosition[0];
